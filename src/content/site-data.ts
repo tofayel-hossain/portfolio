@@ -15,8 +15,9 @@ export const siteData = {
     linkedin: "https://www.linkedin.com/in/tofayel-hossain"
   },
   stats: {
-    projects: "10+",
-    repos: "17+"
+    paper: "0",
+    projects: "18+",
+    repos: "22+"
   },
   education: [
     {
@@ -25,7 +26,7 @@ export const siteData = {
       degree: "Secondary School Certificate · Science",
       period: "2018 — 2020",
       location: "Feni, Bangladesh",
-      grade: "4.89"
+      grade: "4.94"
     },
     {
       level: "HSC",
@@ -41,7 +42,7 @@ export const siteData = {
       degree: "B.Sc. in Computer Science & Engineering",
       period: "2023 — Present",
       location: "Dhaka, Bangladesh",
-      grade: "3.94/4.00 (Running)"
+      grade: "3.95/4.00 (Running)"
     }
   ],
   projects: [
@@ -60,18 +61,105 @@ export const siteData = {
       stack: ["Python", "TypeScript", "CSS", "HTML"],
       repo: "https://github.com/tofayel-hossain/evidence_ai",
       live: "https://evidence-ai-tjpg.onrender.com/"
+    },
+    {
+      title: "HydraMedi",
+      description:
+        "HydraMedi is an IoT-based smart medicine box designed mainly for elderly people and users who may forget their medication schedules or have difficulty identifying different medicines.",
+      stack: ["IoT", "C++", "Arduino", "Firebase", "HTML", "CSS", "JavaScript"],
+      repo: "https://github.com/tofayel-hossain/hydramedi",
+      live: "https://hydramedi.kaisarshuvo52.workers.dev/"
     }
   ],
   skills: [
-    { group: "Languages", items: ["Python", "C / C++", "JavaScript", "TypeScript"] },
-    { group: "Frontend", items: ["React", "Next.js", "HTML", "CSS"] },
-    { group: "Backend", items: ["Node.js", "REST API", "PostgreSQL", "Prisma"] },
-    { group: "AI / Data", items: ["Machine Learning", "NLP", "Pandas", "Data Analysis"] },
-    { group: "Engineering", items: ["Microcontrollers", "Electronics"] },
-    { group: "Tools", items: ["Git", "GitHub", "Linux", "Technical Writing"] }
+    {
+      group: "Programming Languages",
+      items: ["Python", "C++", "Java", "C#", "JavaScript", "TypeScript", "PHP"]
+    },
+    {
+      group: "Machine Learning & Data Science",
+      items: [
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Data Preprocessing",
+        "Feature Engineering",
+        "Naive Bayes",
+        "Logistic Regression",
+        "SVM",
+        "Model Evaluation"
+      ]
+    },
+    {
+      group: "Deep Learning & NLP",
+      items: [
+        "PyTorch",
+        "Hugging Face Transformers",
+        "BanglaBERT",
+        "Sentence Transformers",
+        "Text Classification",
+        "Semantic Similarity",
+        "LLM Hallucination Detection",
+        "Graph Neural Networks",
+        "Intrusion Detection Systems"
+      ]
+    },
+    {
+      group: "Web Development & Deployment",
+      items: [
+        "Streamlit",
+        "React",
+        "Vite",
+        "Node.js",
+        "HTML",
+        "CSS",
+        "WordPress"
+      ]
+    },
+    {
+      group: "Databases",
+      items: ["MySQL", "SQL", "Firebase Realtime Database", "Supabase"]
+    },
+    {
+      group: "Developer Tools",
+      items: [
+        "Git",
+        "GitHub",
+        "Visual Studio Code",
+        "Jupyter Notebook"
+      ]
+    },
+    {
+      group: "Core Computer Science",
+      items: [
+        "Data Structures & Algorithms",
+        "Object-Oriented Programming",
+        "Competitive Programming",
+        "Problem Solving"
+      ]
+    },
+    {
+      group: "Professional Skills",
+      items: [
+        "Teamwork",
+        "Collaboration",
+        "Analytical Thinking",
+        "Time Management",
+        "Communication"
+      ]
+    },
+    {
+      group: "Additional Skills",
+      items: [
+        "Graphic Design",
+        "Digital Marketing",
+        "Microsoft Office",
+        "LaTeX"
+      ]
+    }
   ],
   hobbies: [
-    { title: "Problem Solving", detail: "Analyzing complex problems, designing efficient solutions, and debugging issues systematically." },
+    { title: "Problem Solving", detail: "Analyzing complex problems, designing efficient solutions and debugging issues systematically." },
     { title: "Travel", detail: "Exploring new places, food and local culture." }
   ]
 };
