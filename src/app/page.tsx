@@ -56,12 +56,11 @@ export default function Home() {
         </section>
       </Reveal>
 
-      {/* Paper / Project / Repository info */}
+      {/* Project & Repository summary */}
       <Reveal>
         <section className="metrics-section" aria-label="Portfolio summary">
           <div className="container">
             <div className="portfolio-metrics">
-              <div className="metric-item"><span className="stat-label">Papers</span><strong className="stat-value">{siteData.stats.papers}</strong><small>Research & publications</small></div>
               <div className="metric-item"><span className="stat-label">Projects</span><strong className="stat-value">{siteData.stats.projects}</strong><small>Selected engineering work</small></div>
               <div className="metric-item"><span className="stat-label">Repos</span><strong className="stat-value">{siteData.stats.repos}</strong><small>Public code repositories</small></div>
             </div>
@@ -117,17 +116,19 @@ export default function Home() {
                 </article>
               ))}
             </div>
-            <div className="projects-grid">
-              {siteData.projects.slice(2).map((project) => (
-                <article className="project-card" key={project.title}>
-                  <div className="project-card-top"><div className="project-icon">◇</div></div>
-                  <h3 className="project-title">{project.title}</h3>
-                  <p className="project-desc">{project.description}</p>
-                  <Tags items={project.stack} />
-                  <div className="project-links"><a className="project-link" href={project.repo}><Github size={14} /> Code</a>{project.live !== "#" && <a className="project-link project-link-live" href={project.live}>Live <ExternalLink size={13} /></a>}</div>
-                </article>
-              ))}
-            </div>
+            {siteData.projects.length > 2 && (
+              <div className="projects-grid">
+                {siteData.projects.slice(2).map((project) => (
+                  <article className="project-card" key={project.title}>
+                    <div className="project-card-top"><div className="project-icon">◇</div></div>
+                    <h3 className="project-title">{project.title}</h3>
+                    <p className="project-desc">{project.description}</p>
+                    <Tags items={project.stack} />
+                    <div className="project-links"><a className="project-link" href={project.repo}><Github size={14} /> Code</a>{project.live !== "#" && <a className="project-link project-link-live" href={project.live}>Live <ExternalLink size={13} /></a>}</div>
+                  </article>
+                ))}
+              </div>
+            )}
           </div>
         </section>
       </Reveal>
@@ -151,50 +152,9 @@ export default function Home() {
       </Reveal>
 
       <Reveal>
-        <section className="section" id="research">
-          <div className="container">
-            <SectionHead label="06 / Research" title="Research & Publications" />
-            <div className="research-grid">
-              {siteData.research.map((item) => (
-                <article className="research-card" key={item.title}>
-                  <div className="research-card-head"><span className="research-role">{item.role} · {item.institution}</span><span className="research-period">{item.period}</span></div>
-                  <h3 className="research-title">{item.title}</h3>
-                  <p className="research-desc">{item.description}</p>
-                  <Tags items={item.tags} />
-                  <div className="research-links">
-                    <a href={item.paperUrl}>Paper <ExternalLink size={12} /></a>
-                    <a href={item.repoUrl}>Repository <Github size={12} /></a>
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            <h3 className="pubs-title">Publications</h3>
-            <div className="pub-list">
-              {siteData.publications.map((pub) => (
-                <article className="pub-item" key={pub.title}>
-                  <div className="pub-icon">📄</div>
-                  <div className="pub-content">
-                    <div className="pub-title-row"><p className="pub-title">{pub.title}</p><span className={`pub-status pub-status--${pub.status.toLowerCase().replace(/\s+/g, "-")}`}>{pub.status}</span></div>
-                    <div className="pub-meta">
-                      <span className="pub-conference">✦ {pub.conference}</span>
-                      <Tags items={pub.tags} />
-                      <a className="pub-link" href={pub.paper}>Paper ↗</a>
-                      <a className="pub-link" href={pub.code}>Code ↗</a>
-                      <span className="pub-date">{pub.date}</span>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-      </Reveal>
-
-      <Reveal>
         <section className="contact" id="contact">
           <div className="container">
-            <SectionHead label="07 / Contact" title="Let's Connect" />
+            <SectionHead label="06 / Contact" title="Let's Connect" />
             <div className="contact-body">
               <div className="contact-quote"><span className="quote-mark">“</span><p>If you want to discuss a project, research collaboration, internship, or an interesting engineering problem, feel free to reach out.</p></div>
               <div className="contact-actions"><a href={`mailto:${siteData.email}`} className="btn-primary"><Mail size={16} /> Email Me</a><a href={siteData.socials.linkedin} className="btn-outline" target="_blank" rel="noreferrer"><Linkedin size={16} /> LinkedIn</a><a href={siteData.socials.github} className="btn-outline" target="_blank" rel="noreferrer"><Github size={16} /> GitHub</a></div>

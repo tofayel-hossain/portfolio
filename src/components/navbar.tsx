@@ -9,7 +9,6 @@ const links = [
   ["Projects", "#projects"],
   ["Problem", "#problem-solving"],
   ["GitHub", "#github"],
-  ["Research", "#research"],
   ["Contact", "#contact"]
 ];
 

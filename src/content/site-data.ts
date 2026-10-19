@@ -12,11 +12,9 @@ export const siteData = {
   leetcodeUsername: "o8A2dt8BfK",
   socials: {
     github: "https://github.com/tofayel-hossain",
-    linkedin: "https://www.linkedin.com/in/tofayel-hossain",
-    scholar: "https://scholar.google.com/"
+    linkedin: "https://www.linkedin.com/in/tofayel-hossain"
   },
   stats: {
-    papers: "0",
     projects: "10+",
     repos: "17+"
   },
@@ -46,25 +44,6 @@ export const siteData = {
       grade: "3.94/4.00 (Running)"
     }
   ],
-  research: [] as Array<{
-    role: string;
-    institution: string;
-    period: string;
-    title: string;
-    description: string;
-    tags: string[];
-    paperUrl: string;
-    repoUrl: string;
-  }>,
-  publications: [] as Array<{
-    title: string;
-    conference: string;
-    date: string;
-    status: string;
-    tags: string[];
-    paper: string;
-    code: string;
-  }>,
   projects: [
     {
       title: "AI Resume Analyzer",
@@ -73,6 +52,14 @@ export const siteData = {
       stack: ["Python", "Streamlit", "NLP"],
       repo: "https://github.com/tofayel-hossain/ai-resume-analyzer",
       live: "https://ai-resume-analyzer-th.streamlit.app/"
+    },
+    {
+      title: "EvidenceAI",
+      description:
+        "EvidenceAI is an AI assistant for scientific papers. Upload research PDFs, ask questions, get short and clear answers with exact page citations and check answers for accuracy.",
+      stack: ["Python", "TypeScript", "CSS", "HTML"],
+      repo: "https://github.com/tofayel-hossain/evidence_ai",
+      live: "https://evidence-ai-tjpg.onrender.com/"
     }
   ],
   skills: [
