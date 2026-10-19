@@ -46,31 +46,25 @@ export const siteData = {
       grade: "3.94/4.00 (Running)"
     }
   ],
-  research: [
-    /*{
-      role: "Paper Project",
-      institution: "Independent Research",
-      period: "2026",
-      title: "Research prototype from paper to reproducible code",
-      description:
-        "Use this featured research card for a thesis, conference paper, preprint, or implementation where readers can quickly reach both the paper and its repository.",
-      tags: ["Research", "Reproducibility", "Open Source"],
-      paperUrl: "#",
-      repoUrl: "https://github.com/your-github-username/research-project"
-    }*/
-  ],
-  publications: [
-    /*{
-      title: "Your Research Paper Title",
-      conference: "Conference / Journal",
-      date: "2026",
-      status: "Under Review",
-      tags: ["Machine Learning", "Research"],
-      paper: "#",
-      code: "https://github.com/your-github-username/research-project"
-    },*/
-    
-  ],
+  research: [] as Array<{
+    role: string;
+    institution: string;
+    period: string;
+    title: string;
+    description: string;
+    tags: string[];
+    paperUrl: string;
+    repoUrl: string;
+  }>,
+  publications: [] as Array<{
+    title: string;
+    conference: string;
+    date: string;
+    status: string;
+    tags: string[];
+    paper: string;
+    code: string;
+  }>,
   projects: [
     {
       title: "AI Resume Analyzer",
